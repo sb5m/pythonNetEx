@@ -6,13 +6,19 @@ namespace CholeskyDecomposition
     {
         static void Main(string[] args)
         {
-            double[,] A = {
-                { 4, 12, -16 },
-                { 12, 37, -43 },
-                { -16, -43, 98 }
-            };
+            Console.Write("Enter the size of the matrix: ");
+            int n = int.Parse(Console.ReadLine());
 
-            int n = A.GetLength(0);
+            double[,] A = new double[n, n];
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write($"Enter the value for A[{i},{j}]: ");
+                    A[i, j] = double.Parse(Console.ReadLine());
+                }
+            }
+
             double[,] L = new double[n, n];
 
             for (int i = 0; i < n; i++)
@@ -35,7 +41,7 @@ namespace CholeskyDecomposition
                 }
             }
 
-            Console.WriteLine("Original matrix A:");
+            Console.WriteLine("\nOriginal matrix A:");
             PrintMatrix(A);
 
             Console.WriteLine("\nCholesky decomposition L:");
