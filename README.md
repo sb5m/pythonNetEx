@@ -1,6 +1,8 @@
 <h4 align="center">CholeskyDecomposition</h4>
 <p align="center">Simple console based Cholesky decomposition written in C#</p>
 
+---
+
 Console:
 <div align="center">
   <p>
