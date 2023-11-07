@@ -2,23 +2,41 @@
 
 namespace CholeskyDecomposition
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.Write("Enter the size of the matrix: ");
             int n = int.Parse(Console.ReadLine());
 
-            double[,] A = new double[n, n];
+            double[,] A = ReadMatrix(n);
+
+            double[,] L = CholeskyDecomposition(A);
+
+            Console.WriteLine("\nOriginal matrix A:");
+            PrintMatrix(A);
+
+            Console.WriteLine("\nCholesky decomposition L:");
+            PrintMatrix(L);
+        }
+
+        public static double[,] ReadMatrix(int n)
+        {
+            double[,] matrix = new double[n, n];
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
                     Console.Write($"Enter the value for A[{i},{j}]: ");
-                    A[i, j] = double.Parse(Console.ReadLine());
+                    matrix[i, j] = double.Parse(Console.ReadLine());
                 }
             }
+            return matrix;
+        }
 
+        public static double[,] CholeskyDecomposition(double[,] A)
+        {
+            int n = A.GetLength(0);
             double[,] L = new double[n, n];
 
             for (int i = 0; i < n; i++)
@@ -40,15 +58,10 @@ namespace CholeskyDecomposition
                     }
                 }
             }
-
-            Console.WriteLine("\nOriginal matrix A:");
-            PrintMatrix(A);
-
-            Console.WriteLine("\nCholesky decomposition L:");
-            PrintMatrix(L);
+            return L;
         }
 
-        static void PrintMatrix(double[,] matrix)
+        public static void PrintMatrix(double[,] matrix)
         {
             int rows = matrix.GetLength(0);
             int cols = matrix.GetLength(1);
