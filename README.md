@@ -6,13 +6,19 @@
 Console:
 <div align="center">
   <p>
-    <img src="./res/images/CholeskyDecompExe.jpg">
+    <img src="./res/images/CholeskyDecompPython.jpg">
+  </p>
+</div>
+
+<div align="center">
+  <p>
+    <img src="./res/images/CholeskyDecompCsharp.jpg">
   </p>
 </div>
 
 Proof:
 <div align="center">
   <p>
-    <img src="./res/images/CholeskyDecomp.jpg">
+    <img src="./res/images/CholeskyDecompProof.jpg">
   </p>
 </div>
