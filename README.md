@@ -1,5 +1,5 @@
-<h4 align="center">CholeskyDecomposition</h4>
-<p align="center">Simple console based Cholesky decomposition written in C#</p>
+<h4 align="center">PythonNet Example</h4>
+<p align="center">Seamlessly integrated C# Cholesky decomposition into Python</p>
 
 ---
 
