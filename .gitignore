@@ -13,3 +13,5 @@ _ReSharper.*
 *.resharper
 Ankh.NoLoad
 .vs
+
+__pycache__
